@@ -1,8 +1,8 @@
-# Your Name Here
+# Marit Mallberg
 # UWYO COSC 1010
-# Submission Date
-# Lab 03 
-# Lab Section: 
+# 10/1/24
+# Lab 04
+# Lab Section: 10
 # Sources, people worked with, help given to: 
 # your
 # comments
@@ -102,4 +102,25 @@ min_temps = [
 # For the next part, determine the highest and lowest recorded temperatures.
 # HINT: You can find this information without using any logic or looping.
 
+#h is a marker of the high temps, l is the marker for low temps
+maxh=max_temps[0]
 
+minl=min_temps[0]
+
+htot=0
+ltot=0
+
+for i in range(0,len(max_temps)):
+    if max_temps[i]>maxh:
+        maxh=max_temps[i]
+    if min_temps[i]<minl:
+        minl=min_temps[i]
+    htot=htot+max_temps[i]
+    ltot=ltot+min_temps[i]
+hmean=htot/365
+lmean=ltot/365
+
+print(f"{maxh} is the maximum temperture.")
+print(f"{minl} is the minimum temperture.")
+print(f"{hmean} is the mean of the maximum tempertures.")
+print(f"{lmean} is the mean of the minimum tempertures.")
